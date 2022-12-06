@@ -3,5 +3,5 @@ interface ContainerProps {
 }
 
 export const Container: React.FC<ContainerProps> = ({ children }) => {
-	return <div className="mx-4 sm:mx-8 lg:mx-[160px]">{children}</div>;
+	return <div className="px-4 sm:px-8 lg:px-[160px]">{children}</div>;
 };

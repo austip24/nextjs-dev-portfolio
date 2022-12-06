@@ -46,7 +46,7 @@ const NavMenu: React.FC = () => {
 
 export const Navbar: React.FC = () => {
 	return (
-		<nav className="text-neutral flex items-center justify-between py-2">
+		<nav className="text-neutral flex items-center justify-between py-2 px-4 sm:px-8 lg:px-[160px]">
 			<Link href="/" className="hover:opacity-90">
 				<Image src="/logo.svg" alt="logo" width="40" height="40" />
 			</Link>
@@ -59,15 +59,6 @@ export const Navbar: React.FC = () => {
 						{link.label}
 					</Link>
 				))}
-			</div>
-
-			<div className="hidden sm:flex sm:justify-between sm:items-center gap-2 md:gap-4">
-				<Link href="">
-					<Image src="/Github.svg" alt="github" width="30" height="30" />
-				</Link>
-				<Link href="">
-					<Image src="/Linkedin.svg" alt="github" width="30" height="30" />
-				</Link>
 			</div>
 		</nav>
 	);

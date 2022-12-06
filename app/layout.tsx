@@ -12,10 +12,8 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
 		<html>
 			<head />
 			<body>
-				<Container>
-					<Navbar />
-					{children}
-				</Container>
+				<Navbar />
+				<main className="mt-4">{children}</main>
 			</body>
 		</html>
 	);
