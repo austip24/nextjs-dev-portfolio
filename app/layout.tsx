@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "../components/Container";
-import { Navbar } from "../components/Navbar";
+import { Container } from "../components/container";
+import { Navbar } from "../components/navbar";
 import "../styles/globals.css";
 
 interface LayoutProps {
@@ -11,7 +11,7 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<html>
 			<head />
-			<body>
+			<body className="">
 				<Navbar />
 				<main className="mt-4">{children}</main>
 			</body>

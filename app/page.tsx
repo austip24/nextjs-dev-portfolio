@@ -1,12 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Container } from "../components/Container";
+import { ClientImage } from "../components/ClientImage";
+import { Container } from "../components/container";
 import {
 	Hero,
 	HeroSectionTitle,
 	HeroSubtitle,
 	HeroTitle,
-} from "../components/Hero";
+} from "../components/hero";
+import { HorizontalSeparator } from "../components/separator";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 const Homepage = () => {
 	return (
@@ -27,7 +30,7 @@ const Homepage = () => {
 			</Hero>
 
 			<section className="relative h-[284px]">
-				<Image src="/horizontal_separator.svg" alt="separator" fill />
+				{/* <Image src="/horizontal_separator.svg" alt="separator" fill />
 
 				<Image
 					src="/CoverPhoto.png"
@@ -35,7 +38,17 @@ const Homepage = () => {
 					width={582}
 					height={653}
 					className="absolute right-[11.9rem] -top-80"
-				/>
+				/> */}
+
+				<div className="relative">
+					<HorizontalSeparator />
+					<ClientImage
+						src="/CoverPhoto.png"
+						alt="photo of me"
+						width={582}
+						height={653}
+					/>
+				</div>
 
 				<Container>
 					<section className="absolute top-12 text-xl max-w-xl flex flex-col gap-2">

@@ -60,6 +60,15 @@ export const Navbar: React.FC = () => {
 					</Link>
 				))}
 			</div>
+
+			<div className="hidden sm:flex sm:items-center gap-2 md:gap-4">
+				<Link href="">
+					<Image src="/Github.svg" alt="github" width="35" height="35" />
+				</Link>
+				<Link href="">
+					<Image src="/Linkedin.svg" alt="github" width="35" height="35" />
+				</Link>
+			</div>
 		</nav>
 	);
 };

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Container } from "./Container";
+import { Container } from "./container";
 
 interface HeroProps {
 	children?: React.ReactNode;
