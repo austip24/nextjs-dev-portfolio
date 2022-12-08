@@ -5,25 +5,29 @@ import Link from "next/link";
 import { GithubIcon } from "../components/icons/github";
 import { LinkedinIcon } from "../components/icons/linkedin";
 import { Button } from "../components/button";
+import { PageTitle } from "../components/pageTitle";
 
 const Homepage: React.FC = () => {
 	return (
-		<div className="overflow-hidden h-full flex flex-col justify-center">
-			<Container className="grow grid place-items-center">
+		<div className="h-full w-screen max-w-screen overflow-hidden flex flex-col justify-center">
+			<Container className="grow flex justify-center items-center lg:flex-col lg:items-start lg:justify-start w-full lg:gap-6">
+				{/* Page Title */}
+				<PageTitle>Home</PageTitle>
+
 				{/* Hero Content */}
 				<Hero>
 					<HeroTitle>Austin Pierson</HeroTitle>
 					<HeroSubtitle>Software Engineer / Web Developer</HeroSubtitle>
 					<HeroLinks>
-						<Link href="/" className="relative w-6 aspect-square">
+						<Link href="/">
 							<GithubIcon
-								className="w-6 aspect-square hover:fill-white transition-colors"
+								className="w-6 md:w-7 aspect-square hover:fill-white transition-colors"
 								label="link to github"
 							/>
 						</Link>
-						<Link href="/" className="relative w-6 aspect-square">
+						<Link href="/">
 							<LinkedinIcon
-								className="w-6 aspect-square hover:fill-white transition-colors"
+								className="w-6 md:w-7 aspect-square hover:fill-white transition-colors"
 								label="link to linkedin"
 							/>
 						</Link>
@@ -32,24 +36,23 @@ const Homepage: React.FC = () => {
 			</Container>
 
 			{/* Hero BG */}
-			<div className="bg-hero max-w-5xl h-40 bg-cover bg-center bg-no-repeat"></div>
+			<div className="bg-hero lg:bg-hero-lg h-56 lg:h-[600px] lg:bg-contain xl:bg-auto bg-center bg-no-repeat -z-50 lg:absolute lg:left-0 lg:right-0"></div>
 
-			<Container className="grow flex flex-col justify-center items-center gap-4 mb-2">
-				<section className="text-center flex flex-col gap-2 tracking-wider">
+			<Container className="grow w-full flex flex-col justify-center items-center lg:justify-start lg:items-start mb-2 xl:pt-4">
+				<section className="text-center lg:text-start flex flex-col gap-2 tracking-wider">
 					{/* Quote */}
-					<p className="text-sm font-semibold">
+					<p className="text-sm lg:text-xl font-semibold">
 						Steve Jobs, co-founder of Apple, Inc.
 					</p>
-					<q className="text-neutral text-xs italic">
+					<q className="text-neutral text-xs lg:text-base italic max-w-md xl:max-w-2xl">
 						Be a yardstick of quality. Some people aren&apos;t used to an
 						environment where excellence is expected.
 					</q>
 				</section>
-
-				<Button className="flex items-center justify-center gap-2 font-bold text-base">
-					<Downarrow /> Click me!
-				</Button>
 			</Container>
+			<Button className="flex items-center justify-center gap-2 font-bold text-sm sm:text-base">
+				<Downarrow className="w-5 sm:w-6 md:w-8" /> Click me!
+			</Button>
 		</div>
 	);
 };

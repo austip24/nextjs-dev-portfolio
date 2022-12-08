@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
 				</Link>
 
 				{/* Navigation */}
-				<nav className="hidden sm:grid sm:grow sm:place-items-center">
+				<nav className="hidden sm:grid sm:grow sm:place-items-center text-sm lg:text-base">
 					<ul className="max-w-2xl w-full flex justify-between">
 						{links.map((link) => (
 							<li key={link.label} className="grow text-center">
@@ -81,16 +81,16 @@ export const Header: React.FC = () => {
 				</div>
 
 				{/* External Links */}
-				<div className="hidden sm:flex gap-4">
-					<Link href="/" className="relative w-6 aspect-square">
+				<div className="hidden sm:flex gap-2 lg:gap-4">
+					<Link href="/">
 						<GithubIcon
-							className="w-6 aspect-square hover:fill-white transition-colors"
+							className="w-4 aspect-square hover:fill-white transition-colors"
 							label="link to github"
 						/>
 					</Link>
-					<Link href="/" className="relative w-6 aspect-square">
+					<Link href="/">
 						<LinkedinIcon
-							className="w-6 aspect-square hover:fill-white transition-colors"
+							className="w-4 aspect-square hover:fill-white transition-colors"
 							label="link to linkedin"
 						/>
 					</Link>

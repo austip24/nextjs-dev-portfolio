@@ -20,7 +20,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				hero: "url('/hero-bg.png')",
-				"hero-sm": "url('/hero-bg-sm.png')",
+				"hero-lg": "url('/hero-bg-large.png')",
 			},
 			spacing: {
 				"navigation-height": "var(--navigation-height)",

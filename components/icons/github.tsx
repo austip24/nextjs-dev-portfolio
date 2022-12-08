@@ -7,11 +7,9 @@ export const GithubIcon: React.FC<GithubProps> = ({ className, label }) => {
 	return (
 		<>
 			<svg
-				width="98"
-				height="96"
 				viewBox="0 0 98 96"
 				xmlns="http://www.w3.org/2000/svg"
-				className={`fill-neutral w-8 h-8 ${className ?? ""}`}
+				className={`fill-neutral ${className ?? ""}`}
 			>
 				<path
 					fillRule="evenodd"
