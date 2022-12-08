@@ -1,7 +1,13 @@
 interface ContainerProps {
 	children: React.ReactNode;
+	className?: string;
 }
 
-export const Container: React.FC<ContainerProps> = ({ children }) => {
-	return <div className="px-4 sm:px-8 lg:px-[160px]">{children}</div>;
+export const Container: React.FC<ContainerProps> = ({
+	children,
+	className,
+}) => {
+	return (
+		<div className={`mx-auto max-w-7xl px-8 ${className}`}>{children}</div>
+	);
 };

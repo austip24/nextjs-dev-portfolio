@@ -1,67 +1,55 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ClientImage } from "../components/ClientImage";
 import { Container } from "../components/container";
-import {
-	Hero,
-	HeroSectionTitle,
-	HeroSubtitle,
-	HeroTitle,
-} from "../components/hero";
-import { HorizontalSeparator } from "../components/separator";
-import { useWindowSize } from "../hooks/useWindowSize";
+import { Downarrow } from "../components/icons/downarrow";
+import { Hero, HeroLinks, HeroSubtitle, HeroTitle } from "../components/hero";
+import Link from "next/link";
+import { GithubIcon } from "../components/icons/github";
+import { LinkedinIcon } from "../components/icons/linkedin";
+import { Button } from "../components/button";
 
-const Homepage = () => {
+const Homepage: React.FC = () => {
 	return (
-		<div className="flex flex-col gap-4">
-			<Hero>
-				<HeroSectionTitle>Design</HeroSectionTitle>
-				<HeroTitle>Austin Pierson</HeroTitle>
-				<HeroSubtitle>Software Engineer / Web Developer</HeroSubtitle>
+		<div className="overflow-hidden h-full flex flex-col justify-center">
+			<Container className="grow grid place-items-center">
+				{/* Hero Content */}
+				<Hero>
+					<HeroTitle>Austin Pierson</HeroTitle>
+					<HeroSubtitle>Software Engineer / Web Developer</HeroSubtitle>
+					<HeroLinks>
+						<Link href="/" className="relative w-6 aspect-square">
+							<GithubIcon
+								className="w-6 aspect-square hover:fill-white transition-colors"
+								label="link to github"
+							/>
+						</Link>
+						<Link href="/" className="relative w-6 aspect-square">
+							<LinkedinIcon
+								className="w-6 aspect-square hover:fill-white transition-colors"
+								label="link to linkedin"
+							/>
+						</Link>
+					</HeroLinks>
+				</Hero>
+			</Container>
 
-				<div className="flex items-center gap-2 md:gap-4">
-					<Link href="">
-						<Image src="/Github.svg" alt="github" width="35" height="35" />
-					</Link>
-					<Link href="">
-						<Image src="/Linkedin.svg" alt="github" width="35" height="35" />
-					</Link>
-				</div>
-			</Hero>
+			{/* Hero BG */}
+			<div className="bg-hero max-w-5xl h-40 bg-cover bg-center bg-no-repeat"></div>
 
-			<section className="relative h-[284px]">
-				{/* <Image src="/horizontal_separator.svg" alt="separator" fill />
+			<Container className="grow flex flex-col justify-center items-center gap-4 mb-2">
+				<section className="text-center flex flex-col gap-2 tracking-wider">
+					{/* Quote */}
+					<p className="text-sm font-semibold">
+						Steve Jobs, co-founder of Apple, Inc.
+					</p>
+					<q className="text-neutral text-xs italic">
+						Be a yardstick of quality. Some people aren&apos;t used to an
+						environment where excellence is expected.
+					</q>
+				</section>
 
-				<Image
-					src="/CoverPhoto.png"
-					alt="photo of me"
-					width={582}
-					height={653}
-					className="absolute right-[11.9rem] -top-80"
-				/> */}
-
-				<div className="relative">
-					<HorizontalSeparator />
-					<ClientImage
-						src="/CoverPhoto.png"
-						alt="photo of me"
-						width={582}
-						height={653}
-					/>
-				</div>
-
-				<Container>
-					<section className="absolute top-12 text-xl max-w-xl flex flex-col gap-2">
-						<p className="font-semibold">
-							Steve Jobs, co-founder of Apple, Inc.
-						</p>
-						<q className="text-neutral italic">
-							Be a yardstick of quality. Some people aren&apos;t used to an
-							environment where excellence is expected.
-						</q>
-					</section>
-				</Container>
-			</section>
+				<Button className="flex items-center justify-center gap-2 font-bold text-base">
+					<Downarrow /> Click me!
+				</Button>
+			</Container>
 		</div>
 	);
 };

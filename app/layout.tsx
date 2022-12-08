@@ -1,7 +1,13 @@
 import React from "react";
-import { Container } from "../components/container";
-import { Navbar } from "../components/navbar";
+import { Header } from "../components/header";
+import { Footer } from "../components/footer";
+import { Inter } from "@next/font/google";
 import "../styles/globals.css";
+
+const inter = Inter({
+	subsets: ["latin"],
+	variable: "--font-inter",
+});
 
 interface LayoutProps {
 	children: React.ReactNode;
@@ -11,9 +17,12 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<html>
 			<head />
-			<body className="">
-				<Navbar />
-				<main className="mt-4">{children}</main>
+			<body
+				className={`${inter.variable} font-sans h-screen relative flex flex-col justify-between`}
+			>
+				<Header />
+				<main className="flex grow">{children}</main>
+				<Footer />
 			</body>
 		</html>
 	);

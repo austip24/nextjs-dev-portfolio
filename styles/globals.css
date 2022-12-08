@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+	:root {
+		--navigation-height: 3rem;
+		--footer-height: 3rem;
+	}
+
 	html {
 		@apply bg-background text-white;
 	}

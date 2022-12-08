@@ -1,3 +1,5 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
@@ -7,6 +9,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: ["var(--font-inter)", ...fontFamily.sans],
+			},
 			colors: {
 				background: "#0F1624",
 				neutral: "#928A97",
@@ -14,7 +19,12 @@ module.exports = {
 				"primary-purple": "#AE02FF",
 			},
 			backgroundImage: {
-				"hero-pattern": "url('/img/hero-pattern.jpeg')",
+				hero: "url('/hero-bg.png')",
+				"hero-sm": "url('/hero-bg-sm.png')",
+			},
+			spacing: {
+				"navigation-height": "var(--navigation-height)",
+				"footer-height": "var(--footer-height)",
 			},
 		},
 	},
