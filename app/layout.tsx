@@ -18,7 +18,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 		<html>
 			<head />
 			<body
-				className={`${inter.variable} font-sans h-screen relative flex flex-col justify-between`}
+				className={`${inter.variable} font-sans min-h-screen max-w-screen relative flex flex-col justify-between`}
 			>
 				<Header />
 				<main className="flex grow">{children}</main>
