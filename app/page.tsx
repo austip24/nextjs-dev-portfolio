@@ -50,9 +50,18 @@ const Homepage: React.FC = () => {
 					</q>
 				</section>
 			</Container>
-			<Button className="flex items-center justify-center gap-2 font-bold text-sm sm:text-base">
-				<Downarrow className="w-5 sm:w-6 md:w-8" /> Click me!
-			</Button>
+
+			<Container>
+				<Button>
+					<Link
+						href="/about"
+						className="inline-flex items-center justify-center gap-2 font-bold"
+					>
+						<Downarrow className="w-6 md:w-8" />
+						<span>Click me!</span>
+					</Link>
+				</Button>
+			</Container>
 		</div>
 	);
 };

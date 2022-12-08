@@ -6,7 +6,7 @@ interface ButtonProps {
 export const Button: React.FC<ButtonProps> = ({ children, className }) => {
 	return (
 		<button
-			className={`bg-gradient-to-b from-primary-purple to-primary-blue text-transparent bg-clip-text ${
+			className={`w-fit bg-gradient-to-b from-primary-purple to-primary-blue text-transparent bg-clip-text ${
 				className ?? ""
 			}`}
 		>

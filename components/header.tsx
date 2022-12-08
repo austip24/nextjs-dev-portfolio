@@ -84,13 +84,13 @@ export const Header: React.FC = () => {
 				<div className="hidden sm:flex gap-2 lg:gap-4">
 					<Link href="/">
 						<GithubIcon
-							className="w-4 aspect-square hover:fill-white transition-colors"
+							className="w-5 aspect-square hover:fill-white transition-colors"
 							label="link to github"
 						/>
 					</Link>
 					<Link href="/">
 						<LinkedinIcon
-							className="w-4 aspect-square hover:fill-white transition-colors"
+							className="w-5 aspect-square hover:fill-white transition-colors"
 							label="link to linkedin"
 						/>
 					</Link>

@@ -9,11 +9,11 @@ const inter = Inter({
 	variable: "--font-inter",
 });
 
-interface LayoutProps {
+interface RootLayoutProps {
 	children: React.ReactNode;
 }
 
-const RootLayout: React.FC<LayoutProps> = ({ children }) => {
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 	return (
 		<html>
 			<head />
