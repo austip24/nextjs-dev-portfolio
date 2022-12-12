@@ -45,7 +45,7 @@ const SkillsPage = () => {
 			<Container className="w-full flex items-center justify-center">
 				<Button className="absolute bottom-12">
 					<Link
-						href="/projects"
+						href="/works"
 						className="inline-flex items-center justify-center gap-2 font-bold"
 					>
 						<Downarrow className="w-6 md:w-8" />
