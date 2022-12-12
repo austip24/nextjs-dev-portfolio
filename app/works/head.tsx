@@ -1,4 +1,4 @@
-const ProjectsHead = () => {
+const WorksHead = () => {
 	return (
 		<>
 			<title>Austin&apos;s Portfolio - Projects</title>
@@ -7,4 +7,4 @@ const ProjectsHead = () => {
 	);
 };
 
-export default ProjectsHead;
+export default WorksHead;
