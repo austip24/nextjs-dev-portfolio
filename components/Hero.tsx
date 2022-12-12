@@ -23,7 +23,7 @@ export const HeroSubtitle: React.FC<HeroElementProps> = ({ children }) => {
 };
 
 export const HeroLinks: React.FC<HeroElementProps> = ({ children }) => {
-	return <div className="flex gap-8 mt-2">{children}</div>;
+	return <div className="flex gap-4 mt-2">{children}</div>;
 };
 
 export const Hero: React.FC<HeroProps> = ({ children }) => {

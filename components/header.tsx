@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./container";
 import { GithubIcon } from "./icons/github";
+import { HamburgerIcon } from "./icons/hamburger";
 import { LinkedinIcon } from "./icons/linkedin";
 import { Logo } from "./icons/logo";
 
@@ -35,24 +36,21 @@ const links: NavLink[] = [
 const NavMenu: React.FC = () => {
 	return (
 		<Menu>
-			<Menu.Button className="relative w-8 aspect-square -mr-4">
-				<Image
-					className="fill-neutral"
-					src="/menu.svg"
-					alt="toggle menu"
-					fill
-				/>
-			</Menu.Button>
+			<div className="flex">
+				<Menu.Button className="relative w-6 md:w-7 aspect-square -mr-4">
+					<HamburgerIcon />
+				</Menu.Button>
+			</div>
 		</Menu>
 	);
 };
 
 export const Header: React.FC = () => {
 	return (
-		<header className="z-10 border-b border-white/20 backdrop-blur-md">
+		<header className="w-full fixed top-0 left-0 z-10 border-b border-white/20 backdrop-blur-md">
 			<Container className="h-navigation-height flex items-center justify-between">
 				{/* Logo */}
-				<Link href="/" className="-ml-4 sm:m-0 relative w-8 aspect-square">
+				<Link href="/" className="-ml-4 sm:m-0 relative">
 					<Logo
 						className="hover:opacity-80 transition-opacity"
 						label="link to home"

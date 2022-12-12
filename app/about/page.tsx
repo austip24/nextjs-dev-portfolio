@@ -17,14 +17,14 @@ const AboutPage = () => {
 							<HeroTitle>A bit about me...</HeroTitle>
 						</Hero>
 
-						<p className="text-xl tracking-tighter md:tracking-normal">
+						<p className="text-xl tracking-tighter md:tracking-normal xl:max-w-xl 2xl:max-w-2xl">
 							I am a computer engineer turned full-stack web developer based in
 							Arizona. I have a passion for building web applications that are
 							user-friendly, performant, and accessible. If you are looking for
 							someone to turn an idea or concept you have into a digital
 							masterpiece on the web, I am the guy you are looking for!
 						</p>
-						<p className="text-xl tracking-tighter md:tracking-normal">
+						<p className="text-xl tracking-tighter md:tracking-normal xl:max-w-xl 2xl:max-w-2xl">
 							Need a developer?{" "}
 							<Link
 								href="/contact"
