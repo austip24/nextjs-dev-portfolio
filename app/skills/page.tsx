@@ -9,9 +9,12 @@ import { Downarrow } from "../../components/icons/downarrow";
 
 const SkillsPage = () => {
 	return (
-		<div className="h-full w-screen max-w-screen overflow-hidden">
-			<Container className="w-full lg:flex lg:flex-col lg:items-end lg:justify-center">
-				<div className="text-center">
+		<div className="h-full overflow-hidden w-screen">
+			<Container className="w-full xl:flex xl:flex-col xl:items-end overflow-hidden">
+				{/* Background */}
+				<div className="hidden xl:block absolute left-0 top-0 bg-skills bg-auto w-[800px] h-full bg-left bg-no-repeat -z-50"></div>
+
+				<div className="text-center xl:max-w-[650px]">
 					<PageTitle>Skills</PageTitle>
 
 					<div className="flex flex-col gap-4 lg:gap-8 items-center">

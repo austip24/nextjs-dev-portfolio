@@ -22,6 +22,7 @@ module.exports = {
 				hero: "url('/hero-bg.png')",
 				"hero-lg": "url('/hero-bg-large.png')",
 				about: "url('/about-bg-1.png')",
+				skills: "url('/skills-bg.png')",
 			},
 			spacing: {
 				"navigation-height": "var(--navigation-height)",
