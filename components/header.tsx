@@ -1,20 +1,20 @@
 "use client";
 
 import { Menu } from "@headlessui/react";
-import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./container";
 import { GithubIcon } from "./icons/github";
 import { HamburgerIcon } from "./icons/hamburger";
 import { LinkedinIcon } from "./icons/linkedin";
 import { Logo } from "./icons/logo";
+import { links } from "../data/links";
 
 interface NavLink {
 	href: string;
 	label: string;
 }
 
-const links: NavLink[] = [
+const navLinks: NavLink[] = [
 	{
 		href: "/about",
 		label: "About",
@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
 				{/* Navigation */}
 				<nav className="hidden sm:grid sm:grow sm:place-items-center text-sm lg:text-base">
 					<ul className="max-w-2xl w-full flex justify-between">
-						{links.map((link) => (
+						{navLinks.map((link) => (
 							<li key={link.label} className="grow text-center">
 								<Link
 									href={link.href}
@@ -80,13 +80,13 @@ export const Header: React.FC = () => {
 
 				{/* External Links */}
 				<div className="hidden sm:flex gap-2 lg:gap-4">
-					<Link href="/">
+					<Link href={links.github}>
 						<GithubIcon
 							className="w-5 aspect-square hover:fill-white transition-colors"
 							label="link to github"
 						/>
 					</Link>
-					<Link href="/">
+					<Link href={links.linkedin}>
 						<LinkedinIcon
 							className="w-5 aspect-square hover:fill-white transition-colors"
 							label="link to linkedin"

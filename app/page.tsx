@@ -2,6 +2,7 @@ import { Container } from "../components/container";
 import { Downarrow } from "../components/icons/downarrow";
 import { Hero, HeroLinks, HeroSubtitle, HeroTitle } from "../components/hero";
 import Link from "next/link";
+import { links } from "../data/links";
 import { GithubIcon } from "../components/icons/github";
 import { LinkedinIcon } from "../components/icons/linkedin";
 import { Button } from "../components/button";
@@ -19,13 +20,13 @@ const Homepage: React.FC = () => {
 					<HeroTitle>Austin Pierson</HeroTitle>
 					<HeroSubtitle>Software Engineer / Web Developer</HeroSubtitle>
 					<HeroLinks>
-						<Link href="/">
+						<Link href={links.github}>
 							<GithubIcon
 								className="w-6 md:w-7 aspect-square hover:fill-white transition-colors"
 								label="link to github"
 							/>
 						</Link>
-						<Link href="/">
+						<Link href={links.linkedin}>
 							<LinkedinIcon
 								className="w-6 md:w-7 aspect-square hover:fill-white transition-colors"
 								label="link to linkedin"

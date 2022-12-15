@@ -8,7 +8,7 @@ interface HeroElementProps {
 
 export const HeroTitle: React.FC<HeroElementProps> = ({ children }) => {
 	return (
-		<h1 className="bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent font-extrabold text-2xl md:text-4xl xl:text-5xl uppercase tracking-[0.15em] leading-7 w-max-content text-center sm:text-left">
+		<h1 className="bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent font-extrabold text-2xl md:text-4xl xl:text-5xl uppercase tracking-[0.15em] leading-7 w-max-content text-center">
 			{children}
 		</h1>
 	);

@@ -36,7 +36,6 @@ const AboutPage = () => {
 					</div>
 				</section>
 			</Container>
-
 			{/* Background */}
 			<div className="hidden xl:block absolute right-0 top-0 bg-about bg-cover w-[650px] h-full bg-right -z-50"></div>
 
