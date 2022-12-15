@@ -37,7 +37,7 @@ const navLinks: NavLink[] = [
 const NavMenu: React.FC = () => {
 	return (
 		<Menu as="div" className="relative">
-			<div>
+			<div className="flex">
 				<Menu.Button className="relative w-6 md:w-7 aspect-square -mr-4">
 					<HamburgerIcon className="hover:fill-white transition-colors" />
 				</Menu.Button>
