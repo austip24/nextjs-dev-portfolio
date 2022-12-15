@@ -17,7 +17,7 @@ import { Downarrow } from "../../components/icons/downarrow";
 const WorksPage = () => {
 	return (
 		<div className="h-full w-screen max-w-screen overflow-hidden">
-			<Container className="flex flex-col gap-4 md:gap-12">
+			<Container className="flex flex-col gap-4 md:gap-12 mb-8">
 				<div className="text-center">
 					<PageTitle>Works</PageTitle>
 					<Hero>
