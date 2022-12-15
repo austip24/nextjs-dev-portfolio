@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
 interface WindowSize {
-	width: number;
-	height: number;
+	width: number | undefined;
+	height: number | undefined;
 }
 
 export const useWindowSize = () => {
 	const [windowSize, setWindowSize] = useState<WindowSize>({
-		width: window.innerWidth,
-		height: window.innerHeight,
+		width: undefined,
+		height: undefined,
 	});
 
 	useEffect(() => {
@@ -19,9 +19,9 @@ export const useWindowSize = () => {
 			});
 		};
 
-		window.addEventListener("resize", handleResize);
+		window?.addEventListener("resize", handleResize);
 
-		return () => window.removeEventListener("resize", handleResize);
+		return () => window?.removeEventListener("resize", handleResize);
 	}, []);
 
 	return windowSize;

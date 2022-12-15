@@ -40,14 +40,14 @@ export const CardStack: React.FC<{ stack: string[] }> = ({ stack }) => {
 				<div key={`${idx}-${item}`} className="relative">
 					<div
 						className={`h-full text-[0.625rem] md:text-sm font-semibold text-center rounded-full bg-gradient-to-r ${determineGradient(
-							width >= 768 ? idx % 5 : idx % 3
+							width! >= 768 ? idx % 5 : idx % 3
 						)} text-transparent bg-clip-text p-1`}
 					>
 						{item}
 					</div>
 					<div
 						className={`absolute inset-0 rounded-full bg-gradient-to-r ${determineGradient(
-							width >= 768 ? idx % 5 : idx % 3
+							width! >= 768 ? idx % 5 : idx % 3
 						)} opacity-10 pointer-events-none`}
 					></div>
 				</div>
@@ -89,7 +89,8 @@ export const CardLink: React.FC<{
 				href ?? "hidden"
 			} flex gap-2 items-center justify-center rounded-md border border-neutral p-1 hover:bg-neutral/5 text-sm`}
 		>
-			<GithubIcon label={label} className="w-6 aspect-square fill-white" /> Source code
+			<GithubIcon label={label} className="w-6 aspect-square fill-white" />{" "}
+			Source code
 		</Link>
 	);
 };
