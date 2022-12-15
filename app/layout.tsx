@@ -21,7 +21,9 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 				className={`${inter.variable} font-sans min-h-screen max-w-screen relative flex flex-col justify-between`}
 			>
 				<Header />
-				<main className="flex grow mt-navigation-height mb-footer-height overflow-hidden">{children}</main>
+				<main className="flex grow mt-navigation-height mb-footer-height overflow-hidden">
+					{children}
+				</main>
 				<Footer />
 			</body>
 		</html>

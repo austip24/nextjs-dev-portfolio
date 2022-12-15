@@ -1,6 +1,7 @@
 "use client";
 
-import { Menu } from "@headlessui/react";
+import React from "react";
+import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { Container } from "./container";
 import { GithubIcon } from "./icons/github";
@@ -35,12 +36,67 @@ const navLinks: NavLink[] = [
 
 const NavMenu: React.FC = () => {
 	return (
-		<Menu>
-			<div className="flex">
+		<Menu as="div" className="relative">
+			<div>
 				<Menu.Button className="relative w-6 md:w-7 aspect-square -mr-4">
-					<HamburgerIcon />
+					<HamburgerIcon className="hover:fill-white transition-colors" />
 				</Menu.Button>
 			</div>
+			<Transition
+				as={React.Fragment}
+				enter="transition ease-out duration-100"
+				enterFrom="transform opacity-0 scale-95"
+				enterTo="transform opacity-100 scale-100"
+				leave="transition ease-in duration-75"
+				leaveFrom="transform opacity-100 scale-100"
+				leaveTo="transform opacity-0 scale-95"
+			>
+				<Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-background border border-neutral/50">
+					<div className="p-1">
+						{navLinks.map((link) => (
+							<Menu.Item key={link.label}>
+								{({ active }) => (
+									<Link
+										href={link.href}
+										className={`
+									${active ? "bg-neutral/20" : "bg-background"}
+									rounded-md flex w-full items-center p-2 text-sm transition-colors
+								`}
+									>
+										{link.label}
+									</Link>
+								)}
+							</Menu.Item>
+						))}
+
+						{/* Github and Linkedin Links */}
+						<Menu.Item>
+							<Link
+								href={links.github}
+								className="rounded-md flex w-full items-center p-2 text-sm transition-colors gap-2 hover:bg-neutral/20 group"
+							>
+								<GithubIcon
+									className="w-5 aspect-square group-hover:fill-white transition-colors"
+									label="link to github"
+								/>{" "}
+								Github
+							</Link>
+						</Menu.Item>
+						<Menu.Item>
+							<Link
+								href={links.linkedin}
+								className="rounded-md flex w-full items-center p-2 text-sm transition-colors gap-2 hover:bg-neutral/20 group"
+							>
+								<LinkedinIcon
+									className="w-5 aspect-square group-hover:fill-white transition-colors"
+									label="link to linkedin"
+								/>{" "}
+								LinkedIn
+							</Link>
+						</Menu.Item>
+					</div>
+				</Menu.Items>
+			</Transition>
 		</Menu>
 	);
 };

@@ -14,7 +14,7 @@ const ContactPage = () => {
 				</div>
 				<div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
 					<div className="flex gap-12">
-						<section className="flex flex-col gap-4 text-2xl">
+						<section className="flex flex-col gap-4 text-base md:text-lg lg:text-2xl">
 							<div>
 								<label>Email: </label>
 								<span className="underline cursor-pointer select-all">

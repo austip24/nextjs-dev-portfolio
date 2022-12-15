@@ -16,6 +16,7 @@ export const works: Work[] = [
 			"A React-based web application that makes use of OpenWeatherAPI's daily forecast API to provide an interface that allows users to view the future daily forecast for a chosen location.",
 		stack: ["React", "TypeScript", "WeatherAPI"],
 		thumbnailImage: "/works/weather-app/thumbnail.png",
+		sourceLink: "https://github.com/austip24/react-weather-forecast",
 	},
 	{
 		id: 1,
@@ -24,6 +25,7 @@ export const works: Work[] = [
 			"Next.js web application that allows users to create, share, and edit documents with a rich text editor through Firebase's realtime firestore. Has both dark/light mode options, is built to be responsive, and supports Google sign-in.",
 		stack: ["ReactJS", "NextJS", "Firebase", "Tailwind"],
 		thumbnailImage: "/works/google-docs-clone/thumbnail.png",
+		sourceLink: "https://github.com/austip24/google-docs-clone",
 	},
 	{
 		id: 2,
@@ -32,6 +34,7 @@ export const works: Work[] = [
 			'A web application that allows users to register and view data gathered from different heart tracking devices. Full support for user authentication with a "health instructor" page that allows a user to view data gathered from other user\'s devices upon agreement.',
 		stack: ["HTML", "CSS", "JQuery", "Express", "MongoDB", "Materialize"],
 		thumbnailImage: "/works/heart-app/thumbnail.png",
+		sourceLink: "https://github.com/austip24/heart-track-app",
 	},
 	{
 		id: 3,
@@ -57,6 +60,7 @@ export const works: Work[] = [
 			"Developed an interative google map that allows users to view areas of interest across Arizona by clicking on the map or by specifying latitude/longitude coordinates.",
 		stack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
 		thumbnailImage: "/works/geocache-app/thumbnail.PNG",
+		sourceLink: "https://github.com/austip24/geocache-web-app",
 	},
 	{
 		id: 5,
@@ -65,5 +69,6 @@ export const works: Work[] = [
 			"Course project on creating and analyzing an adaptive Kalman Filter, which is commonly used in motion tracking software. Developed a simulation tool that uses the filter to track and predict mouse movement with customizable parameters (i.e., noise, history size).",
 		stack: ["Python", "Pygame"],
 		thumbnailImage: "/works/kalman-filter/thumbnail.PNG",
+		sourceLink: "https://github.com/austip24/kalman-simulation",
 	},
 ];

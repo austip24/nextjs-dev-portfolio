@@ -6,6 +6,7 @@ import {
 	CardTitle,
 	CardStack,
 	WorksCard,
+	CardLink,
 } from "../../components/workscard";
 import { works } from "../../data/works";
 import { PageTitle } from "../../components/pageTitle";
@@ -34,6 +35,10 @@ const WorksPage = () => {
 								<CardTitle>{work.title}</CardTitle>
 								<CardStack stack={work.stack} />
 								<CardDescription>{work.description}</CardDescription>
+								<CardLink
+									href={work?.sourceLink}
+									label={`Source code link for ${work.title}`}
+								/>
 							</div>
 						</WorksCard>
 					))}

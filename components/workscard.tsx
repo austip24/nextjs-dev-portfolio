@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useWindowSize } from "../hooks/useWindowSize";
+import { GithubIcon } from "./icons/github";
 
 interface CardProps {
 	children: React.ReactNode;
@@ -74,6 +76,22 @@ export const CardDescription: React.FC<CardProps> = ({ children }) => {
 
 export const CardTitle: React.FC<CardProps> = ({ children }) => {
 	return <h1 className="font-bold text-2xl">{children}</h1>;
+};
+
+export const CardLink: React.FC<{
+	href: string | undefined;
+	label: string;
+}> = ({ href, label }) => {
+	return (
+		<Link
+			href={href ?? "/"}
+			className={`inline ${
+				href ?? "hidden"
+			} flex gap-2 items-center justify-center rounded-md border border-neutral p-1 hover:bg-neutral/5 text-sm`}
+		>
+			<GithubIcon label={label} className="w-6 aspect-square fill-white" /> Source code
+		</Link>
+	);
 };
 
 export const WorksCard: React.FC<CardProps> = ({ children }) => {
