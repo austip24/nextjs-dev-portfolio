@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Container } from "../../components/container";
-import { PageTitle } from "../../components/pageTitle";
+import { Container } from "../../components/Container";
+import { PageTitle } from "../../components/PageTitle";
 import { GithubIcon } from "../../components/icons/github";
 import { LinkedinIcon } from "../../components/icons/linkedin";
 import { links } from "../../data/links";

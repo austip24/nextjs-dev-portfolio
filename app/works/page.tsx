@@ -1,7 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { Container } from "../../components/container";
+import { Container } from "../../components/Container";
 import {
 	CardDescription,
 	CardImage,
@@ -9,11 +7,11 @@ import {
 	CardStack,
 	WorksCard,
 	CardLink,
-} from "../../components/workscard";
+} from "../../components/WorksCard";
 import { works } from "../../data/works";
-import { PageTitle } from "../../components/pageTitle";
-import { Hero, HeroTitle } from "../../components/hero";
-import { Button } from "../../components/button";
+import { PageTitle } from "../../components/PageTitle";
+import { Hero, HeroTitle } from "../../components/Hero";
+import { Button } from "../../components/Button";
 import { Downarrow } from "../../components/icons/downarrow";
 
 const WorksPage = () => {

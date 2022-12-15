@@ -1,8 +1,8 @@
-import { Button } from "../../components/button";
-import { Container } from "../../components/container";
-import { Hero, HeroTitle } from "../../components/hero";
-import { PageTitle } from "../../components/pageTitle";
-import { ProgressCircle } from "../../components/progress";
+import { Button } from "../../components/Button";
+import { Container } from "../../components/Container";
+import { Hero, HeroTitle } from "../../components/Hero";
+import { PageTitle } from "../../components/PageTitle";
+import { ProgressCircle } from "../../components/Progress";
 import { skills } from "../../data/skills";
 import Link from "next/link";
 import { Downarrow } from "../../components/icons/downarrow";

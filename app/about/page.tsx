@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { Button } from "../../components/button";
-import { Container } from "../../components/container";
-import { Hero, HeroTitle } from "../../components/hero";
+import { Button } from "../../components/Button";
+import { Container } from "../../components/Container";
+import { Hero, HeroTitle } from "../../components/Hero";
 import { Downarrow } from "../../components/icons/downarrow";
-import { PageTitle } from "../../components/pageTitle";
+import { PageTitle } from "../../components/PageTitle";
 
 const AboutPage = () => {
 	return (
