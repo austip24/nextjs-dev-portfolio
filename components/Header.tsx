@@ -3,7 +3,7 @@
 import React from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
-import { Container } from "./Container";
+import { Container } from "./container";
 import { GithubIcon } from "./icons/github";
 import { HamburgerIcon } from "./icons/hamburger";
 import { LinkedinIcon } from "./icons/linkedin";

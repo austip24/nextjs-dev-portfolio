@@ -1,12 +1,12 @@
-import { Container } from "../components/Container";
+import { Container } from "../components/container";
 import { Downarrow } from "../components/icons/downarrow";
-import { Hero, HeroLinks, HeroSubtitle, HeroTitle } from "../components/Hero";
+import { Hero, HeroLinks, HeroSubtitle, HeroTitle } from "../components/hero";
 import Link from "next/link";
 import { links } from "../data/links";
 import { GithubIcon } from "../components/icons/github";
 import { LinkedinIcon } from "../components/icons/linkedin";
-import { Button } from "../components/Button";
-import { PageTitle } from "../components/PageTitle";
+import { Button } from "../components/button";
+import { PageTitle } from "../components/pagetitle";
 
 const Homepage: React.FC = () => {
 	return (

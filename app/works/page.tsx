@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Container } from "../../components/Container";
+import { Container } from "../../components/container";
 import {
 	CardDescription,
 	CardImage,
@@ -7,11 +7,11 @@ import {
 	CardStack,
 	WorksCard,
 	CardLink,
-} from "../../components/WorksCard";
+} from "../../components/workscard";
 import { works } from "../../data/works";
-import { PageTitle } from "../../components/PageTitle";
-import { Hero, HeroTitle } from "../../components/Hero";
-import { Button } from "../../components/Button";
+import { PageTitle } from "../../components/pagetitle";
+import { Hero, HeroTitle } from "../../components/hero";
+import { Button } from "../../components/button";
 import { Downarrow } from "../../components/icons/downarrow";
 
 const WorksPage = () => {
