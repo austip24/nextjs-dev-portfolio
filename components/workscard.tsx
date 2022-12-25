@@ -14,20 +14,24 @@ interface CardImageProps {
 	alt: string;
 }
 
-const gradients = [
-	"#11BADF",
-	"#2E97E5",
-	"#4B76EB",
-	"#6854F1",
-	"#892DF8",
-	"#AE02FF",
-];
-
 export const CardStack: React.FC<{ stack: string[] }> = ({ stack }) => {
 	const { width } = useWindowSize();
 
 	const determineGradient = (index: number): string => {
-		return `from-[${gradients[index]}] to-[${gradients[index + 1]}]`;
+		switch (index) {
+			case 0:
+				return "from-[#11BADF] to-[#2E97E5]";
+			case 1:
+				return "from-[#2E97E5] to-[#4B76EB]";
+			case 2:
+				return "from-[#4B76EB] to-[#6854F1]";
+			case 3:
+				return "from-[#6854F1] to-[#892DF8]";
+			case 4:
+				return "from-[#892DF8] to-[#AE02FF]";
+			default:
+				return "";
+		}
 	};
 
 	return (
@@ -36,14 +40,14 @@ export const CardStack: React.FC<{ stack: string[] }> = ({ stack }) => {
 				<div key={`${idx}-${item}`} className="relative">
 					<div
 						className={`h-full text-[0.625rem] sm:text-xs font-semibold text-center rounded-full bg-gradient-to-r ${determineGradient(
-							width! >= 768 ? idx % 5 : idx % 3
+							width! >= 768 ? idx % 5 : (idx % 3) * 2
 						)} text-transparent bg-clip-text p-1`}
 					>
 						{item}
 					</div>
 					<div
 						className={`absolute inset-0 rounded-full bg-gradient-to-r ${determineGradient(
-							width! >= 768 ? idx % 5 : idx % 3
+							width! >= 768 ? idx % 5 : (idx % 3) * 2
 						)} opacity-10 pointer-events-none`}
 					></div>
 				</div>
@@ -55,7 +59,7 @@ export const CardStack: React.FC<{ stack: string[] }> = ({ stack }) => {
 export const CardImage: React.FC<CardImageProps> = ({ src, alt }) => {
 	return (
 		<div className="relative w-full aspect-video">
-			<div className=" transition-opacity">
+			<div className="transition-opacity relative w-full h-full">
 				{/* missing class: group-hover:opacity-30 */}
 				<Image src={src} alt={alt} fill className="object-cover" />
 			</div>
