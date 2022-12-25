@@ -14,24 +14,20 @@ interface CardImageProps {
 	alt: string;
 }
 
+const gradients = [
+	"#11BADF",
+	"#2E97E5",
+	"#4B76EB",
+	"#6854F1",
+	"#892DF8",
+	"#AE02FF",
+];
+
 export const CardStack: React.FC<{ stack: string[] }> = ({ stack }) => {
 	const { width } = useWindowSize();
 
 	const determineGradient = (index: number): string => {
-		switch (index) {
-			case 0:
-				return "from-[#11BADF] to-[#2E97E5]";
-			case 1:
-				return "from-[#2E97E5] to-[#4B76EB]";
-			case 2:
-				return "from-[#4B76EB] to-[#6854F1]";
-			case 3:
-				return "from-[#6854F1] to-[#892DF8]";
-			case 4:
-				return "from-[#892DF8] to-[#AE02FF]";
-			default:
-				return "";
-		}
+		return `from-[${gradients[index]}] to-[${gradients[index + 1]}]`;
 	};
 
 	return (
@@ -39,7 +35,7 @@ export const CardStack: React.FC<{ stack: string[] }> = ({ stack }) => {
 			{stack.map((item, idx) => (
 				<div key={`${idx}-${item}`} className="relative">
 					<div
-						className={`h-full text-[0.625rem] md:text-sm font-semibold text-center rounded-full bg-gradient-to-r ${determineGradient(
+						className={`h-full text-[0.625rem] sm:text-xs font-semibold text-center rounded-full bg-gradient-to-r ${determineGradient(
 							width! >= 768 ? idx % 5 : idx % 3
 						)} text-transparent bg-clip-text p-1`}
 					>
