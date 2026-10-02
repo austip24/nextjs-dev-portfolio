@@ -1,15 +1,19 @@
-export interface Skill {
-	name: string;
-	proficiency: number;
+export interface SkillGroup {
+	category: string;
+	items: string[];
 }
 
-export const skills: Skill[] = [
-	{ name: "HTML5", proficiency: 95 },
-	{ name: "CSS3", proficiency: 90 },
-	{ name: "TypeScript", proficiency: 80 },
-	{ name: "ReactJS", proficiency: 80 },
-	{ name: "Python", proficiency: 75 },
-	{ name: "ExpressJS", proficiency: 70 },
-	{ name: "MongoDB", proficiency: 70 },
-	{ name: "MySQL", proficiency: 60 },
+export const skills: SkillGroup[] = [
+	{
+		category: "Languages & frameworks",
+		items: ["TypeScript", "Python", "React", "Next.js", "Tailwind CSS"],
+	},
+	{
+		category: "Data",
+		items: ["Analytics", "Data visualization", "SQL"],
+	},
+	{
+		category: "Cloud & DevOps",
+		items: ["Azure (App Service, ACR)", "AWS", "CI/CD", "GitHub & Azure DevOps"],
+	},
 ];

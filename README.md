@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Austin Pierson — Portfolio
 
-## Getting Started
+Single-page developer portfolio built with **Next.js 16** (App Router, Turbopack), **React 19**, **Tailwind CSS v4**, **shadcn/ui**, and **motion**. Deployed on Vercel at https://austip24.vercel.app.
 
-First, run the development server:
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
+pnpm install
+pnpm dev      # http://localhost:3000
+pnpm lint
+pnpm build && pnpm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Updating content
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+All copy lives in `data/` and is kept separate from the components:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+| File                 | Contents                                          |
+| -------------------- | ------------------------------------------------- |
+| `data/site.ts`       | Name, role, summary, email, links, nav sections   |
+| `data/experience.ts` | Work history (timeline)                           |
+| `data/education.ts`  | Degrees                                           |
+| `data/skills.ts`     | Tech list shown in the About section              |
+| `data/projects.ts`   | Project cards (images live in `public/works/`)    |
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Resume
 
-## Learn More
+The Resume buttons link to **`public/Pierson_Austin_Resume.pdf`** (path set in `data/site.ts`). To update it, export a web-safe copy (no phone number or street address) and replace that file. Then update `data/` to match the new resume.
 
-To learn more about Next.js, take a look at the following resources:
+## Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+app/                 layout, page, metadata, icon, OG image, sitemap, robots
+components/ui/       shadcn/ui primitives (project-owned)
+components/layout/   header, mobile nav, footer, section wrapper
+components/sections/ hero, about, experience, projects, contact
+components/motion/   small client-only animation helpers
+data/                portfolio content
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The old `/about`, `/skills`, `/works`, and `/contact` routes redirect to the matching sections (`/skills` goes to About) (see `next.config.ts`).
