@@ -4,10 +4,20 @@ export interface Project {
 	tags: string[];
 	image: string;
 	sourceLink?: string;
+	liveLink?: string;
 	paperLink?: string;
 }
 
 export const projects: Project[] = [
+	{
+		title: "Home Value Forecaster",
+		description:
+			"Forecasts home values for ~900 U.S. metros 1, 3, and 12 months out. A monthly Python pipeline backtests baselines, AutoETS/AutoARIMA, and a global LightGBM model against Zillow's own forecast with no lookahead, feeding a Next.js dashboard.",
+		tags: ["Python", "LightGBM", "Next.js", "TypeScript", "Recharts"],
+		image: "/works/home-value-forecaster/thumbnail.png",
+		sourceLink: "https://github.com/austip24/home-value-forecaster",
+		liveLink: "https://home-value-forecaster-theta.vercel.app/",
+	},
 	{
 		title: "Google Docs Clone",
 		description:
