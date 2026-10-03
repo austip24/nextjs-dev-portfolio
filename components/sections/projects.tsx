@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FileText } from "lucide-react";
+import { ExternalLink, FileText } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -61,8 +61,16 @@ function ProjectCard({ project }: { project: Project }) {
 						{project.description}
 					</CardDescription>
 				</CardContent>
-				{(project.sourceLink || project.paperLink) && (
+				{(project.liveLink || project.sourceLink || project.paperLink) && (
 					<CardFooter className="gap-2 pb-5">
+						{project.liveLink && (
+							<Button asChild variant="outline" size="sm">
+								<a href={project.liveLink} target="_blank" rel="noreferrer">
+									<ExternalLink />
+									Live<span className="sr-only"> site for {project.title}</span>
+								</a>
+							</Button>
+						)}
 						{project.sourceLink && (
 							<Button asChild variant="outline" size="sm">
 								<a href={project.sourceLink} target="_blank" rel="noreferrer">
