@@ -10,6 +10,15 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
+		title: "Traffic Intelligence",
+		description:
+			"Traffic Intelligence is an interactive map of every fatal traffic crash in the U.S. across multiple years. It shows where crashes concentrate, how areas compare by crash count and per-capita rate, and how those patterns change over time. Users can filter by year, click a crash or area for details and trends, and share a view by its link.",
+		tags: ["Next.js", "TypeScript", "MapLibre", "PostGIS", "Drizzle"],
+		image: "/works/traffic-intelligence/thumbnail.png",
+		sourceLink: "https://github.com/austip24/traffic-intelligence",
+		liveLink: "https://traffic-intelligence-pearl.vercel.app/map",
+	},
+	{
 		title: "Home Value Forecaster",
 		description:
 			"Forecasts home values for ~900 U.S. metros 1, 3, and 12 months out. A monthly Python pipeline backtests baselines, AutoETS/AutoARIMA, and a global LightGBM model against Zillow's own forecast with no lookahead, feeding a Next.js dashboard.",
